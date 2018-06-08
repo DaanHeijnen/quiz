@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+	
+	<title>DVDM2a - Lesopdrachten 4 &amp; 5</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Quiz assignment HTML template">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Christina Bot">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css"> 
+	<script src="data/quizdata.js"></script>
+	<script src="js/myfunctions.js"></script>
+	
+	<!-- Lesopdracht 4. Voeg je eigen uitleg toe aan deze quiz applicatie en vervang de HTML/CSS code met dat van het door jouw gekozen framework-->
+	
+	<!-- Lesopdracht 5. Vervang data/quizdata.js met een AJAX/JSON oplossing. Omdat je de JSON van je schoolserver haalt waar je in DVDM2b met PHP een JSON bestand genereert, kun je JSONP gebruiken. Je vind een werkend voorbeeld op pagina 382-387 in Duckett Jacascript & jQuery (H8)-->
+
+</head>
+
+<body>
+	
+	<section id="start">
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td><img src="images/screens1_01.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_02.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_03.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_04.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_05.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_06.png" alt="voorbeeld"/></td>
+				<td style="vertical-align: top;padding:16px;" rowspan="3">
+					<p>Wat moet je doen met dit scherm?</p>
+					<p>-</p>
+					<p>Je bouwt het na in correct en "best practice" HTML/CSS (met een HTML/CSS FrameWork) en voegt een Quiz instructie / introductie tekst toe en interactie aan de "knoppen" met DOM events en DOM event listeners.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="images/screens1_07.png" alt="voorbeeld"/></td>
+				<td><a href="javascript: alert('animated div sliding out from the left, displaying help');"><img src="images/screens1_08.png" alt="voorbeeld" style="cursor: ;"/></a></td>
+				<td><img src="images/screens1_09.png" alt="voorbeeld"/></td>
+				<td><a href="javascript: alert('are you sure? y/n then close window');"><img src="images/screens1_10.png" alt="voorbeeld" style="cursor: ;"/></a></td>
+				<td><a href="javascript: alert('hide this screen then show the next');"><img src="images/screens1_11.png" alt="voorbeeld" style="cursor: ;"/></a></td>
+				<td><img src="images/screens1_12.png" alt="voorbeeld"/></td>
+			</tr>
+			<tr>
+				<td><img src="images/screens1_13.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_14.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_15.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_16.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_17.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_18.png" alt="voorbeeld"/></td>
+			</tr>
+		</table>
+	</section>
+	
+	<section id="quiz">
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td style="border:10px solid #ccc;background: #fff;" colspan="6">
+					<p><h2>Quiz Questions</h2></p>
+					<script language="javascript">
+					"use strict";			
+					var correctAnswers = []; //global variable to store correct answers (associative array).
+					var numberofquestions = getmyData(); //store the question data in a global variabele
+
+					/* display questions on the screen */
+					for (var i = 0; i < numberofquestions.length-1; i++) {
+						document.write(drawQuestion(numberofquestions[i],i));
+					}
+
+					</script>
+				
+				</td>
+				<td style="vertical-align: top;padding:16px;" rowspan="3">
+					<p>Wat moet je doen met dit scherm?</p>
+					<p>-</p>
+					<p>Je bouwt het na in correct en "best practice" HTML/CSS (met een HTML/CSS FrameWork) en voegt 10 vragen toe in willekeurige volgorde uit een een Array met Data / Objecten / JSON of vergelijkbare techniek (zie voorbeeld quizdata bestanden).</p>
+					<p>Je voegt weer interactie aan de "knoppen" toe met DOM events en DOM event listeners.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="images/screens1_07.png" alt="voorbeeld"/></td>
+				<td><a href="javascript: alert('hide this screen then show the previous one');"><img src="images/screens2_08.png" alt="voorbeeld" style="cursor: ;"/></a></td>
+				<td><img src="images/screens1_09.png" alt="voorbeeld"/></td>
+				<td><a href="javascript: alert('are you sure? y/n then close window');"><img src="images/screens1_10.png" alt="voorbeeld" style="cursor: ;"/></a></td>
+				<td><a href="javascript: alert('hide this screen then show the next');"><img src="images/screens1_11.png" alt="voorbeeld" style="cursor: ;"/></a></td>
+				<td><img src="images/screens1_12.png" alt="voorbeeld"/></td>
+			</tr>
+			<tr>
+				<td><img src="images/screens1_13.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_14.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_15.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_16.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_17.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_18.png" alt="voorbeeld"/></td>
+			</tr>
+		</table>
+	</section>
+	
+	
+	<section id="score">
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td style="height:200px;border:10px solid #ccc;background:#fff;" colspan="6">
+					<p style="padding:16px;color:red;">Antwoorden goed: <span id="punten">--</span></p>
+				 
+				</td>
+				<td style="vertical-align: top;padding:16px;" rowspan="3">
+					<p>Wat moet je doen met dit scherm?</p>
+					<p>-</p>
+					<p>Probeer de quiz vragen. Elke keer dat je een antwoord verandert komen de behaalde punten in het rood op het scherm te staan.</p>
+					<p>-</p>
+					<p>Je bouwt dit scherm om tot een high score table inclusief ranking.</p>
+					<p>-</p>
+					<p>Je voegt weer interactie aan de "knoppen" toe met DOM events en DOM event listeners.</p>
+				</td>
+			</tr>
+			<tr>
+				<td><img src="images/screens1_07.png" alt="voorbeeld"/></td>
+				<td><a href="javascript: alert('hide this screen then show the previous one');"><img src="images/screens2_08.png" alt="voorbeeld" style="cursor: ;"/></a></td>
+				<td><img src="images/screens1_09.png" alt="voorbeeld"/></td>
+				<td><a href="javascript: alert('are you sure? y/n then close window');"><img src="images/screens1_10.png" alt="voorbeeld" style="cursor: ;"/></a></td>
+				<td><a href="javascript: alert('are you sure? y/n save score then close window');"><img src="images/screens3_11.png" alt="voorbeeld" style="cursor: ;"/></a></td>
+				<td><img src="images/screens1_12.png" alt="voorbeeld"/></td>
+			</tr>
+			<tr>
+				<td><img src="images/screens1_13.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_14.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_15.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_16.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_17.png" alt="voorbeeld"/></td>
+				<td><img src="images/screens1_18.png" alt="voorbeeld"/></td>
+			</tr>
+		</table>
+	</section>
+	
+
+	
+
+</body>
+</html>

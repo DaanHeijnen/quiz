@@ -1,0 +1,30 @@
+body { 
+	background-color: white;
+}
+
+select {
+	margin: 3%;
+}
+
+div.border {
+	margin: 5% 10%;
+	border: solid;
+	border-color: black;
+	border-radius: 10px;
+	padding: 2% 0%;
+	background-color: #689df2;
+}
+
+div.btn {
+	margin: 2%;
+	padding: 0% 1%;
+
+}
+
+.choices {
+
+}
+
+div.keuze {
+	padding: 1% 2%;
+}
